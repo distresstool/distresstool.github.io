@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Dhiraj Subramanian B">
+
+    <title>
+        Index for Localised Distress
+    </title>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi?autoload= {'modules':[{'name':'visualization','version':'1.1','packages':['geochart']}]}"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.css" />
+    <link rel="stylesheet" type="text/css" href="css/please-wait.css" />
+</head>
+
+<body >
+    <nav>
+        <div class="nav-wrapper">
+            <div class="container">
+                <a href="index.html" class="brand-logo">Index for Localised Distress</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <select id="year-selected">
+                            <option value="" disabled selected>Select Year (2018)</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div align="center" style="margin-top: 10px;" class="col s7">
+                <div id="visualization"></div>
+            </div>
+            <div align="center" style="margin-top: 10px;" class="col s5">
+                <div id="sec-column" >
+                    <h4 id="col-header" style="text-align: left">About</h4>
+                    <p style="text-align: left">
+                        The tool is designed to indicate localised distress which may go unidentified. The tool uses MNREGA demand for work as the basis to determine whether the area is under distress or not.  The tool has been designed based on the paper titled "A Friend Indeed: Does The Use of Digital Identity Make Welfare Programs Truly Counter Cyclical ?".  The areas are colour coded based on the intensity of distress. Green being normal. Yellow denotes moderately high distress level. Red denotes acutely high level of distress. Grey denotes no data.
+                    </p>
+                    <p style="text-align: left">
+                        For further understanding of the tool, please refer to the following paper: 
+                        <br><br>A Friend Indeed: Does The Use of Digital Identity Make Welfare Programs Truly Counter Cyclical? <br><B>Authors:</B> <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=352406" target="_blank">Sumit Agarwal,</a> <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3036483" target="_blank">Shradhey Prasad</a>, <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=3036484" target="_blank">Nishka Sharma</a> and <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1685900" target="_blank">Prasanna Tantri</a>. Available <a href="https://ssrn.com/abstract=3201746" target="_blank">here </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="datatables">
+            <table id="district-table">
+            </table>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/materialize.min.js" type="text/javascript"></script>
+    <script src="js/please-wait.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/state.js" type="text/javascript"></script>
+    <script src="js/state_dis_measure.js" type="text/javascript"></script>
+    <script src="js/state_year_details.js" type="text/javascript"></script>
+    <script src="js/dashboard.js" type="text/javascript"></script>
+
+</body>
+
+</html>

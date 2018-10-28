@@ -1,0 +1,21 @@
+
+nav {
+  background-color: #0085c3 !important;
+  border-bottom: 2px solid #fff;
+}
+
+#sec-column {
+  margin: auto;
+  width: 100%;
+}
+
+.caret {
+  visibility: hidden;
+}
+
+.select-dropdown {
+  padding-top: 10px !important;
+  border-bottom: none !important;
+  color: #ffffff;
+  text-align: center;
+}
