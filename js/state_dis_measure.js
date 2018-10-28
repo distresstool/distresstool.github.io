@@ -1,4 +1,5 @@
-var state_2016 = [
+var state_2016 = 
+[
     ['IN-TN','Tamil Nadu',1.01,'Normal'],
     ['IN-AP','Andhra Pradesh & Telangana',1.44,'Moderate'],
     ['IN-AR','Arunachal Pradesh',0.42,'Normal'],
@@ -26,7 +27,8 @@ var state_2016 = [
     ['IN-UT','Uttarakhand',0.97,'Normal'],
     ['IN-WB','West Bengal',2.13,'Moderate']
 ]
-var state_2017 = [
+var state_2017 = 
+[
     ['IN-TN','TAMIL NADU',0.99, "Normal"], 
     ['IN-AP','Andhra Pradesh & Telangana',1.42, "Moderate"], 
     ['IN-AR','Arunachal Pradesh',0.58, "Normal"], 
