@@ -83,10 +83,10 @@ $(document).ready(function() {
                     image_tag += '<area alt="' + district_map[i].District + '" title="' + district_map[i].District + '&#013;' + district_map[i].Sixteen + '" coords="' + district_map[i].Coordinates + '" shape="poly">';
                 }
                 else if(district_map[i].id == rowID && year == '2017'){
-                    image_tag += '<area alt="' + district_map[i].District + '" title="' + district_map[i].District + ' ' + district_map[i].Seventeen + '" coords="' + district_map[i].Coordinates + '" shape="poly">';
+                    image_tag += '<area alt="' + district_map[i].District + '" title="' + district_map[i].District + '&#013;' + district_map[i].Seventeen + '" coords="' + district_map[i].Coordinates + '" shape="poly">';
                 }
                 else if(district_map[i].id == rowID && year == '2018'){
-                    image_tag += '<area alt="' + district_map[i].District + '" title="' + district_map[i].District + ' ' + district_map[i].Eighteen + '" coords="' + district_map[i].Coordinates + '" shape="poly">';
+                    image_tag += '<area alt="' + district_map[i].District + '" title="' + district_map[i].District + '&#013;' + district_map[i].Eighteen + '" coords="' + district_map[i].Coordinates + '" shape="poly">';
                 }
             }
             image_tag += '</map>';
