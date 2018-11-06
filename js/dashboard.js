@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Collapsible.init(elems, options);
 });
 
+var entryFlag = true;
 $(document).ready(function() {
+    $("#year-selected").prop("disabled", false);
     function loadFunction(){
         window.loading_screen.finish();
     }
@@ -75,12 +77,20 @@ $(document).ready(function() {
             setTimeout(loadFunction, 2000);
             var image_string = "images/" + year + "/" + state_object.id + ".png"; 
             var image_tag = '<img src="' + image_string + '" class="responsive-img" usemap="#image-map">';
+            image_tag += '<map name="image-map">';
             for(var i =0; i < district_map.length; i++){
-                if(district_map[i].id == rowID){
-                    image_tag += district_map[i].map;
-                    console.log(image_tag);
+                if(district_map[i].id == rowID && year == '2016'){
+                    image_tag += '<area alt="' + district_map[i].District + '" title="' + district_map[i].District + '&#013;' + district_map[i].Sixteen + '" coords="' + district_map[i].Coordinates + '" shape="poly">';
                 }
-            }      
+                else if(district_map[i].id == rowID && year == '2017'){
+                    image_tag += '<area alt="' + district_map[i].District + '" title="' + district_map[i].District + ' ' + district_map[i].Seventeen + '" coords="' + district_map[i].Coordinates + '" shape="poly">';
+                }
+                else if(district_map[i].id == rowID && year == '2018'){
+                    image_tag += '<area alt="' + district_map[i].District + '" title="' + district_map[i].District + ' ' + district_map[i].Eighteen + '" coords="' + district_map[i].Coordinates + '" shape="poly">';
+                }
+            }
+            image_tag += '</map>';
+            console.log(image_tag);
             $("#visualization").html(image_tag);
             $('map').imageMapResize();
             var sec_column_html = '<ul class="collapsible expandable" style="margin-top:100px text-align:left"><li class="active" style="text-align:left"> <div class="collapsible-header"><i class="material-icons"> place</i>' +  state_object.state_name + '</div><div class="collapsible-body"><span style="text-align:left;"><B>Population: </B><br>' + state_object.population + '<br><br><B>Literacy Rate: </B><br>' + state_object.literacy_rate +  '<br><br><B>State GDP: </B><br>' + state_object.state_gdp + '<br><br><B>Household Work Demanded: </B><br>' + state_year_object.state_household_work_demanded +  '<br><br><B>Person Demanded Work: </B><br>' + state_year_object.state_person_demanded_work + '</span></div></li><li style="text-align:left"><div class="collapsible-header"><i class="material-icons">arrow_drop_down</i>More</div><div class="collapsible-body"><span style="text-align:left;"> <B>State Distress Value</B><br>' + state_year_object.state_dis + '<br><br><B>Sex Ratio: </B><br>' + state_object.sex_ration +  '<br><br><B>Capital: </B><br>' + state_object.capital + '</span></div></li></ul>'
